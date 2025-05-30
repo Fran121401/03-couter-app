@@ -9,12 +9,14 @@
     //     return 4 + 4;
     // }
 
-export const FirstApp = () => {
+export const FirstApp = ({title}) => {
+
+    console.log(props);
 
     return (
     <>
     {/*<code>{JSON.stringify(newMessage) }</code> */}
-    <h1>Francisco</h1>
+    <h1>{title}</h1>
     <p>Soy un subtitulo</p>
     </>
   )
