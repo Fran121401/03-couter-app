@@ -1,3 +1,5 @@
+import PropTypes  from "prop-types";
+
 //Los Objetos no son permitidos
     // const newMessage = {
     //     message: 'Hola Mundo',  
@@ -9,15 +11,22 @@
     //     return 4 + 4;
     // }
 
-export const FirstApp = ({title}) => {
+export const FirstApp = ({title, subTitle}) => {
 
-    console.log(props);
+    // if (!title) {
+    //     throw new Error("El titulo no existe");
+    // }
 
     return (
     <>
     {/*<code>{JSON.stringify(newMessage) }</code> */}
     <h1>{title}</h1>
-    <p>Soy un subtitulo</p>
+    <p>{subTitle}</p>
     </>
   )
+}
+
+FirstApp.propTypes = {
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.number,
 }
